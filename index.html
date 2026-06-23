@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="description" content="坂本直哉の公開用スキルシート。顧客情報保護のため企業名・案件名を匿名化しています。" />
+  <title>坂本 直哉｜公開用スキルシート / CV</title>
+  <style>
+    :root {
+      --bg: #f6fbfb;
+      --paper: #ffffff;
+      --ink: #112329;
+      --muted: #5c7078;
+      --line: #dbe8eb;
+      --accent: #18b7aa;
+      --accent-dark: #063544;
+      --soft: #e9f8f6;
+      --shadow: 0 24px 80px rgba(6, 53, 68, .10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(24, 183, 170, .22), transparent 34rem),
+        radial-gradient(circle at top right, rgba(6, 53, 68, .16), transparent 30rem),
+        var(--bg);
+    }
+    a { color: var(--accent-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 72px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--accent-dark), #0b5061 58%, var(--accent));
+      color: white;
+      border-radius: 28px;
+      padding: clamp(28px, 5vw, 56px);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.24);
+      right: -110px;
+      top: -110px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.82);
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 6vw, 58px);
+      letter-spacing: -.04em;
+      line-height: 1.08;
+    }
+    .lead {
+      max-width: 760px;
+      margin: 22px 0 0;
+      font-size: clamp(16px, 2.2vw, 20px);
+      color: rgba(255,255,255,.9);
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px;
+      color: rgba(255,255,255,.92);
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(10px);
+      font-size: 13px;
+    }
+
+    .notice {
+      margin: 18px 0 0;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.12);
+      color: rgba(255,255,255,.88);
+      font-size: 13px;
+      max-width: 860px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .card {
+      background: rgba(255,255,255,.92);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: clamp(22px, 3vw, 30px);
+      box-shadow: 0 16px 60px rgba(6, 53, 68, .06);
+    }
+    .card + .card { margin-top: 24px; }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 22px;
+      letter-spacing: -.02em;
+      color: var(--accent-dark);
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      color: var(--ink);
+      letter-spacing: -.01em;
+    }
+    p { margin: 0 0 14px; }
+    .muted { color: var(--muted); }
+    .small { font-size: 13px; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .stat {
+      padding: 16px;
+      border-radius: 18px;
+      background: var(--soft);
+      border: 1px solid #caece7;
+    }
+    .stat strong {
+      display: block;
+      font-size: 26px;
+      line-height: 1.1;
+      color: var(--accent-dark);
+      letter-spacing: -.03em;
+    }
+    .stat span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+    .job {
+      position: relative;
+      padding-left: 22px;
+      border-left: 3px solid var(--line);
+    }
+    .job::before {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: 4px;
+      width: 13px;
+      height: 13px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--soft);
+    }
+    .period {
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+    ul {
+      margin: 10px 0 0 1.1em;
+      padding: 0;
+    }
+    li { margin: 6px 0; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .tag {
+      display: inline-flex;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f1f6f7;
+      border: 1px solid var(--line);
+      color: #32484f;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+
+    .profile-list {
+      display: grid;
+      gap: 12px;
+    }
+    .profile-item {
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .profile-item:last-child { border-bottom: 0; padding-bottom: 0; }
+    .label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+    .value { font-weight: 700; }
+
+    .skill-block { margin-bottom: 18px; }
+    .skill-block:last-child { margin-bottom: 0; }
+
+    .cta {
+      background: var(--accent-dark);
+      color: white;
+    }
+    .cta h2 { color: white; }
+    .cta a { color: white; text-decoration: underline; }
+    .cta p { color: rgba(255,255,255,.86); }
+
+    .footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: white; }
+      .wrap { width: 100%; padding: 0; }
+      .hero, .card { box-shadow: none; border-radius: 0; }
+      .grid { display: block; }
+      .card + .card { margin-top: 12px; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Public CV / Masked Skill Sheet</div>
+      <h1>坂本 直哉</h1>
+      <p class="lead">要件定義から設計・開発・クラウド構築・運用改善まで一気通貫で推進する、生成AI領域に強いフルスタックエンジニア。</p>
+      <div class="hero-meta">
+        <span class="pill">Full‑Stack Engineer</span>
+        <span class="pill">AI / RAG / Agent</span>
+        <span class="pill">PMO / PL補佐</span>
+        <span class="pill">AWS / Azure</span>
+        <span class="pill">業界経験 3年</span>
+      </div>
+      <p class="notice">顧客情報保護のため、企業名・商流名・プロダクト名・固有案件名は非公開化しています。面談時に、開示可能な範囲で詳細を補足します。</p>
+    </section>
+
+    <div class="grid">
+      <section>
+        <article class="card">
+          <h2>Summary</h2>
+          <p>業務側の要件整理・合意形成と、フロントエンド／バックエンド／クラウド実装を両立します。曖昧な要求や未整理の業務フローを、As‑Is / To‑Be整理、要件定義、設計、実装、検証、運用改善まで落とし込み、短期間で「動くもの」を立ち上げることを得意としています。</p>
+          <p>生成AI領域では、RAG、音声要約、AIエージェント、ベクトル検索、プロンプト設計を組み込んだSaaS／業務アプリ開発を経験。大規模プロジェクトでは、テスト設計、品質管理、Jira / Zephyr運用、WBS更新、会議体運営補佐も担当しました。</p>
+        </article>
+
+        <article class="card">
+          <h2>Key Results</h2>
+          <div class="stats">
+            <div class="stat"><strong>80%</strong><span>RAG一次回答率（社内計測）</span></div>
+            <div class="stat"><strong>80%</strong><span>商談議事録・要約作成時間を削減（PoC）</span></div>
+            <div class="stat"><strong>50名超</strong><span>AIプロダクト品質管理支援</span></div>
+            <div class="stat"><strong>数十名</strong><span>エンタープライズAI開発のスプリント推進</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Experience</h2>
+          <div class="timeline">
+            <section class="job">
+              <div class="period">2026/01 – 2026/06</div>
+              <h3>大手通信グループ向け AI活用プラットフォーム支援</h3>
+              <p class="muted">Role: フルスタックエンジニア</p>
+              <ul>
+                <li>AI活用プラットフォームのスプリント開発に参画し、機能実装・改善・テスト・運用改善を担当。</li>
+                <li>PM、デザイン、開発、企画と横断連携し、チケット駆動で継続的なリリース改善を推進。</li>
+                <li>BFF、検索、観測、非同期処理など、エンタープライズAIプロダクトの実装レイヤーをキャッチアップ。</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Hono.js</span><span class="tag">PostgreSQL / pgvector</span><span class="tag">OpenSearch</span><span class="tag">Azure OpenAI</span><span class="tag">Vertex AI</span><span class="tag">AWS</span><span class="tag">SST</span>
+              </div>
+            </section>
+
+            <section class="job">
+              <div class="period">2025/11 – 2025/12</div>
+              <h3>大手金融領域 AIプロダクト 品質 / テスト設計・管理</h3>
+              <p class="muted">Role: 品質PMO / テスト設計 / テスト管理基盤整備</p>
+              <ul>
+                <li>仕様分解からテストケース化までを担当し、レビュー観点・フォーマットを標準化。</li>
+                <li>Jira / Zephyrを用いたPlan / Cycle / Executionの運用設計、CSV一括取込ルール策定、WBS更新を支援。</li>
+                <li>会議体のアジェンダ、議事録、論点整理を通じ、品質基準の明確化と意思決定スピード向上に貢献。</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">Jira</span><span class="tag">Zephyr</span><span class="tag">Confluence</span><span class="tag">Excel</span><span class="tag">PowerPoint</span><span class="tag">品質設計</span><span class="tag">PMO</span>
+              </div>
+            </section>
+
+            <section class="job">
+              <div class="period">2023/06 – 2025/10</div>
+              <h3>AI / DX支援企業 長期参画：生成AI・業務改善・RPA・テスト自動化</h3>
+              <p class="muted">Role: PMO / PL補佐、フルスタックエンジニア、RPA開発リード</p>
+              <ul>
+                <li>社内開発、受託PoC、小売、不動産、AI領域の複数プロジェクトに継続参画。</li>
+                <li>生成AIナレッジチャット、議事録AI、既存RAG基盤の横展開、不動産契約書作成RPA、生産管理刷新支援などを担当。</li>
+                <li>要件が曖昧な業務を整理し、PoCから開発、インフラ構築、運用改善まで横断して推進。</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Vue / Nuxt3</span><span class="tag">Python / FastAPI</span><span class="tag">Go</span><span class="tag">Laravel</span><span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">Terraform</span><span class="tag">OpenAI API</span><span class="tag">FAISS</span><span class="tag">Whisper</span><span class="tag">Selenium</span>
+              </div>
+            </section>
+          </div>
+        </article>
+      </section>
+
+      <aside>
+        <article class="card">
+          <h2>Profile</h2>
+          <div class="profile-list">
+            <div class="profile-item"><span class="label">Name</span><span class="value">坂本 直哉</span></div>
+            <div class="profile-item"><span class="label">Education</span><span class="value">東京工科大学 コンピュータサイエンス学部</span></div>
+            <div class="profile-item"><span class="label">Experience</span><span class="value">業界経験 3年</span></div>
+            <div class="profile-item"><span class="label">Links</span><span class="value"><a href="https://github.com/nao329/" target="_blank" rel="noopener noreferrer">GitHub</a> / <a href="https://www.linkedin.com/in/nao329/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Core Skills</h2>
+          <div class="skill-block">
+            <h3>上流・推進</h3>
+            <p class="small muted">現場ヒアリング、As‑Is整理、To‑Be設計、要件定義、PMO / PL補佐、WBS、Jira / Zephyr、品質・進捗管理</p>
+          </div>
+          <div class="skill-block">
+            <h3>Frontend</h3>
+            <p class="small muted">TypeScript, React, Vue, Nuxt3, TanStack Router, TanStack Query, Biome, Zod</p>
+          </div>
+          <div class="skill-block">
+            <h3>Backend</h3>
+            <p class="small muted">Python, FastAPI, Flask, Go, PHP, Laravel, Hono.js, MySQL, PostgreSQL, NoSQL</p>
+          </div>
+          <div class="skill-block">
+            <h3>AI / Search</h3>
+            <p class="small muted">OpenAI API, Azure OpenAI, Vertex AI, RAG, FAISS, pgvector, OpenSearch, Langfuse, Whisper, Prompt Design</p>
+          </div>
+          <div class="skill-block">
+            <h3>Cloud / DevOps</h3>
+            <p class="small muted">AWS（ECS, EC2, RDS, S3, Route53, ELB, SQS, CloudWatch）, Azure, Docker, Terraform, GitHub Actions, SST</p>
+          </div>
+        </article>
+
+        <article class="card cta">
+          <h2>For Interview</h2>
+          <p>公開版では顧客名・案件名をマスキングしています。面談では、守秘義務の範囲内で、担当工程、技術選定、実装内容、成果の詳細を説明できます。</p>
+        </article>
+      </aside>
+    </div>
+
+    <p class="footer">© Naoya Sakamoto. Public CV. Client and project identifiers are intentionally masked.</p>
+  </main>
+</body>
+</html>

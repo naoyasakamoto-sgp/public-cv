@@ -3,276 +3,146 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>坂本 直哉｜公開用スキルシート / CV</title>
-  <meta name="description" content="坂本直哉の公開用スキルシート。顧客情報・案件特定情報をマスキングしたCV形式の職務経歴です。">
+  <title>坂本 直哉｜公開用スキルシート / Detailed CV</title>
+  <meta name="description" content="坂本直哉の公開用スキルシート。顧客情報をマスキングし、実際の判断・実装・技術的意思決定を中心に整理したCVです。">
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <meta property="og:title" content="坂本 直哉｜公開用スキルシート / CV">
-  <meta property="og:description" content="顧客情報をマスキングした公開用スキルシート。生成AI・SaaS・業務自動化・フルスタック開発。">
+  <meta property="og:title" content="坂本 直哉｜公開用スキルシート / Detailed CV">
+  <meta property="og:description" content="顧客情報をマスキングした公開用CV。生成AI、RAG、SaaS、RPA、品質管理、AI活用プラットフォーム開発。">
   <meta property="og:type" content="website">
   <style>
     :root {
-      --bg: #07151f;
-      --panel: #0d2230;
-      --panel2: #0f2a3b;
-      --text: #eef7f8;
-      --muted: #a9c6c9;
-      --line: rgba(255,255,255,.12);
-      --accent: #25d0b1;
-      --accent2: #0b5b76;
-      --warn: #ffd166;
-      --danger: #ff8a80;
-      --white: #ffffff;
-      --shadow: 0 20px 60px rgba(0,0,0,.35);
-      --radius: 22px;
+      --bg:#06131d;
+      --panel:#0b2230;
+      --panel2:#0f2d3f;
+      --text:#f2fbfb;
+      --muted:#b5cdd2;
+      --subtle:#8fb0b7;
+      --line:rgba(255,255,255,.13);
+      --accent:#25d0b1;
+      --accent2:#0a5b77;
+      --warn:#ffd166;
+      --danger:#ff8a80;
+      --shadow:0 18px 60px rgba(0,0,0,.35);
+      --radius:22px;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", "Segoe UI", sans-serif;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP","Segoe UI",sans-serif;
       background:
-        radial-gradient(circle at 15% 0%, rgba(37,208,177,.22), transparent 34%),
-        radial-gradient(circle at 85% 12%, rgba(11,91,118,.35), transparent 32%),
-        linear-gradient(180deg, #06121b 0%, #081924 48%, #07151f 100%);
-      color: var(--text);
-      line-height: 1.72;
+        radial-gradient(circle at 12% 0%,rgba(37,208,177,.22),transparent 34%),
+        radial-gradient(circle at 92% 10%,rgba(10,91,119,.36),transparent 36%),
+        linear-gradient(180deg,#05111a 0%,#081a26 50%,#06131d 100%);
+      color:var(--text);
+      line-height:1.76;
+      letter-spacing:.01em;
     }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { width: min(1120px, calc(100% - 34px)); margin: 0 auto; }
-    header {
-      padding: 64px 0 32px;
-      border-bottom: 1px solid var(--line);
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{width:min(1180px,calc(100% - 34px));margin:0 auto}
+    header{padding:64px 0 34px;border-bottom:1px solid var(--line)}
+    .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:26px;align-items:stretch}
+    .card,.section,.exp-card,.subproject{
+      background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.034));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(10px);
     }
-    .hero {
-      display: grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap: 28px;
-      align-items: stretch;
+    .card{padding:32px}
+    .eyebrow{color:var(--accent);letter-spacing:.14em;font-size:12px;font-weight:900;text-transform:uppercase;margin-bottom:12px}
+    h1{font-size:clamp(34px,5vw,62px);line-height:1.05;margin:0 0 12px;letter-spacing:-.04em}
+    h2{font-size:28px;line-height:1.2;margin:0 0 18px;letter-spacing:-.02em}
+    h3{font-size:22px;line-height:1.34;margin:0 0 10px;letter-spacing:-.015em}
+    h4{font-size:17px;margin:18px 0 8px;color:#eafffb}
+    p{margin:0 0 14px}
+    .lead{font-size:18px;color:var(--muted);margin-top:14px}
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .tag,.pill,.mask{
+      display:inline-flex;align-items:center;gap:6px;border-radius:999px;font-weight:800;
     }
-    .hero-card, .side-card, .section, .exp-card {
-      background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
+    .tag{border:1px solid rgba(37,208,177,.36);background:rgba(37,208,177,.09);color:#dffcf6;padding:7px 11px;font-size:13px}
+    .pill{border:1px solid var(--line);background:rgba(255,255,255,.06);color:#e0f1f3;padding:5px 10px;font-size:12px}
+    .mask{border:1px solid rgba(37,208,177,.28);background:rgba(37,208,177,.10);color:#e4fffa;padding:4px 9px;font-size:12px;vertical-align:middle}
+    .meta{list-style:none;padding:0;margin:0}
+    .meta li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding:11px 0;color:var(--muted)}
+    .meta li:last-child{border-bottom:0}
+    .meta strong{color:var(--text);text-align:right}
+    main{padding:34px 0 76px}
+    .section{padding:28px;margin-top:24px}
+    .muted{color:var(--muted)}
+    .subtle{color:var(--subtle)}
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .mini{background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:18px;padding:18px}
+    .mini strong{display:block;color:var(--accent);font-size:15px;margin-bottom:6px}
+    .warn{border:1px solid rgba(255,209,102,.44);background:rgba(255,209,102,.09);color:#fff4cf;border-radius:16px;padding:13px 15px;margin:14px 0}
+    .danger{border:1px solid rgba(255,138,128,.38);background:rgba(255,138,128,.08);color:#ffe7e4;border-radius:16px;padding:13px 15px;margin:14px 0}
+    .skills{display:grid;grid-template-columns:190px 1fr;gap:12px 18px;margin:0}
+    .skills dt{color:var(--accent);font-weight:900;border-top:1px solid var(--line);padding-top:12px}
+    .skills dd{margin:0;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+    .toc{display:flex;flex-wrap:wrap;gap:8px}
+    .toc a{border:1px solid var(--line);background:rgba(255,255,255,.05);border-radius:999px;padding:7px 10px;color:#e8f8f9;font-size:13px;font-weight:800}
+    .timeline{display:grid;gap:22px}
+    .exp-card{padding:26px;position:relative;overflow:hidden}
+    .exp-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--accent),var(--accent2))}
+    .exp-head{display:flex;justify-content:space-between;gap:18px;align-items:start;margin-bottom:10px}
+    .period{color:var(--muted);white-space:nowrap;font-size:14px;font-weight:800}
+    .role-row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
+    ul{margin:8px 0 0;padding-left:1.15em}
+    li{margin:5px 0}
+    .deep-list{display:grid;gap:10px;margin-top:12px}
+    .deep-item{border-left:3px solid rgba(37,208,177,.55);background:rgba(0,0,0,.13);padding:11px 13px;border-radius:12px}
+    .deep-item b{color:#fff}
+    .tech{color:var(--muted);background:rgba(0,0,0,.16);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:14px;font-size:14px}
+    .subproject{padding:18px;margin-top:16px;box-shadow:none;background:rgba(255,255,255,.038)}
+    .subproject h4{margin-top:0;color:#fff}
+    .kpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
+    .kpi div{background:rgba(37,208,177,.08);border:1px solid rgba(37,208,177,.23);border-radius:16px;padding:14px}
+    .kpi strong{display:block;color:var(--accent);font-size:22px;line-height:1.1;margin-bottom:4px}
+    footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--muted);font-size:13px}
+    @media(max-width:900px){
+      .hero,.grid-2,.grid-3,.kpi{grid-template-columns:1fr}
+      .skills{grid-template-columns:1fr}
+      .skills dd{border-top:0;padding-top:0}
+      .exp-head{flex-direction:column}
+      .period{white-space:normal}
     }
-    .hero-card { padding: 34px; }
-    .side-card { padding: 26px; }
-    .eyebrow {
-      color: var(--accent);
-      letter-spacing: .12em;
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    h1 {
-      margin: 0 0 10px;
-      font-size: clamp(34px, 5vw, 62px);
-      line-height: 1.06;
-      letter-spacing: -.04em;
-    }
-    .lead {
-      color: var(--muted);
-      font-size: 18px;
-      margin: 16px 0 0;
-    }
-    .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    .tag {
-      border: 1px solid rgba(37,208,177,.35);
-      background: rgba(37,208,177,.08);
-      color: #dffcf6;
-      padding: 7px 11px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-    .meta-list { margin: 0; padding: 0; list-style: none; }
-    .meta-list li {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      border-bottom: 1px solid var(--line);
-      padding: 11px 0;
-      color: var(--muted);
-    }
-    .meta-list li:last-child { border-bottom: 0; }
-    .meta-list strong { color: var(--text); font-weight: 800; }
-    main { padding: 34px 0 72px; }
-    .section { padding: 28px; margin-top: 24px; }
-    h2 {
-      margin: 0 0 18px;
-      font-size: 26px;
-      letter-spacing: -.02em;
-    }
-    h3 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      letter-spacing: -.01em;
-    }
-    p { margin: 0 0 14px; }
-    .muted { color: var(--muted); }
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-    .mini {
-      background: rgba(255,255,255,.045);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 18px;
-    }
-    .mini .num {
-      color: var(--accent);
-      font-size: 28px;
-      font-weight: 900;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .warn {
-      border: 1px solid rgba(255,209,102,.45);
-      background: rgba(255,209,102,.09);
-      color: #fff6d7;
-      border-radius: 16px;
-      padding: 14px 16px;
-      margin: 14px 0;
-    }
-    .danger {
-      border: 1px solid rgba(255,138,128,.38);
-      background: rgba(255,138,128,.08);
-      color: #ffe8e5;
-      border-radius: 16px;
-      padding: 14px 16px;
-      margin: 14px 0;
-    }
-    .mask {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: #dffcf6;
-      background: rgba(37,208,177,.10);
-      border: 1px solid rgba(37,208,177,.25);
-      border-radius: 999px;
-      padding: 4px 9px;
-      font-size: 12px;
-      font-weight: 800;
-      vertical-align: middle;
-    }
-    .skills {
-      display: grid;
-      grid-template-columns: 190px 1fr;
-      gap: 12px 18px;
-      align-items: start;
-    }
-    .skills dt {
-      color: var(--accent);
-      font-weight: 900;
-      border-top: 1px solid var(--line);
-      padding-top: 12px;
-    }
-    .skills dd {
-      margin: 0;
-      color: var(--muted);
-      border-top: 1px solid var(--line);
-      padding-top: 12px;
-    }
-    .timeline { display: grid; gap: 18px; }
-    .exp-card { padding: 24px; position: relative; overflow: hidden; }
-    .exp-card::before {
-      content: "";
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 5px;
-      background: linear-gradient(180deg, var(--accent), var(--accent2));
-    }
-    .exp-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      align-items: start;
-      margin-bottom: 12px;
-    }
-    .period {
-      color: var(--muted);
-      white-space: nowrap;
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .role-row { display:flex; flex-wrap:wrap; gap:8px; margin: 10px 0 14px; }
-    .pill {
-      color: #dceff1;
-      background: rgba(255,255,255,.065);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 4px 9px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-    ul { margin: 10px 0 0; padding-left: 1.15em; }
-    li { margin: 4px 0; }
-    .tech {
-      color: var(--muted);
-      background: rgba(0,0,0,.16);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px 14px;
-      margin-top: 14px;
-      font-size: 14px;
-    }
-    footer {
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      padding: 24px 0 44px;
-      font-size: 13px;
-    }
-    @media (max-width: 860px) {
-      .hero, .grid-2, .grid-3 { grid-template-columns: 1fr; }
-      .skills { grid-template-columns: 1fr; }
-      .skills dd { padding-top: 0; border-top: 0; }
-      .exp-head { flex-direction: column; }
-      .period { white-space: normal; }
-    }
-    @media print {
-      body { background: #fff; color: #111; }
-      .hero-card, .side-card, .section, .exp-card, .mini { box-shadow: none; background: #fff; border-color: #ddd; }
-      .muted, .period, .skills dd, .tech { color: #333; }
-      .tag, .pill, .mask { border-color: #999; color: #111; background: #f6f6f6; }
-      .warn, .danger { color: #111; background: #fff8df; border-color: #d8b14a; }
-      a { color: #111; }
+    @media print{
+      body{background:#fff;color:#111}
+      .card,.section,.exp-card,.subproject,.mini{box-shadow:none;background:#fff;border-color:#ddd}
+      .muted,.subtle,.period,.skills dd,.tech{color:#333}
+      .tag,.pill,.mask{background:#f6f6f6;color:#111;border-color:#999}
+      .warn,.danger{color:#111;background:#fff8df;border-color:#d8b14a}
+      a{color:#111}
     }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap hero">
-      <section class="hero-card">
-        <div class="eyebrow">Public CV / Masked Skill Sheet</div>
+      <section class="card">
+        <div class="eyebrow">Detailed Public CV / Customer Masked</div>
         <h1>坂本 直哉</h1>
         <p class="lead">
-          生成AI・SaaS・業務自動化に強いフルスタックエンジニア。要件定義から設計、開発、インフラ構築、運用保守まで一気通貫で推進します。
+          要件定義・設計・実装・インフラ・運用までを横断し、曖昧な現場で「何を作るべきか」「どこから作るべきか」を決め、実装まで持ち込むフルスタックエンジニアです。
         </p>
         <div class="tags">
-          <span class="tag">Full-stack</span>
-          <span class="tag">生成AI / RAG</span>
-          <span class="tag">SaaS</span>
-          <span class="tag">業務自動化</span>
+          <span class="tag">Full-stack Engineer</span>
+          <span class="tag">RAG / LLM Application</span>
+          <span class="tag">Backend / BFF</span>
           <span class="tag">AWS / Azure</span>
-          <span class="tag">PM / PL補佐</span>
+          <span class="tag">RPA / 業務自動化</span>
+          <span class="tag">QA / PMO</span>
         </div>
       </section>
-
-      <aside class="side-card">
-        <ul class="meta-list">
-          <li><span>年齢</span><strong>24歳</strong></li>
+      <aside class="card">
+        <ul class="meta">
+          <li><span>氏名</span><strong>坂本 直哉</strong></li>
           <li><span>性別</span><strong>男性</strong></li>
           <li><span>最終学歴</span><strong>東京工科大学<br>コンピュータサイエンス学部</strong></li>
-          <li><span>業界経験</span><strong>2年</strong></li>
+          <li><span>業界経験</span><strong>3年</strong></li>
           <li><span>GitHub</span><strong><a href="https://github.com/nao329/" rel="nofollow">nao329</a></strong></li>
           <li><span>LinkedIn</span><strong><a href="https://www.linkedin.com/in/nao329/" rel="nofollow">Profile</a></strong></li>
         </ul>
@@ -282,48 +152,48 @@
 
   <main class="wrap">
     <section class="section">
-      <h2>公開方針</h2>
+      <h2>公開版の前提</h2>
       <p>
-        本ページは公開共有用のCVです。顧客情報保護のため、企業名、プロダクト名、取引先名、商流、特定部署名、担当者名、固有の内部システム名は掲載していません。
+        本ページは公開共有用のスキルシートです。顧客情報保護のため、企業名、プロダクト名、取引先名、商流、特定部署名、担当者名、内部資料名、固有の業務名は掲載していません。
       </p>
       <p>
-        案件は <span class="mask">匿名化済み</span> として、業界、役割、工程、使用技術、成果が伝わる範囲に要約しています。
+        抽象的な「AIでできること」ではなく、各現場で実際に行った判断、技術的な切り分け、担当機能、意思決定、推進上の役割を中心に記載しています。
       </p>
-      <div class="warn">
-        ⚠ 技術詳細・担当範囲に不足または曖昧さがある箇所は、各案件内に「⚠ 技術詳細要確認」として表示しています。
+      <div class="danger">
+        実名企業名・実プロダクト名・顧客名はすべて <span class="mask">マスキング済み</span> です。詳細版はNDA・共有範囲に応じて個別提示してください。
       </div>
     </section>
 
     <section class="section">
-      <h2>Summary</h2>
+      <h2>Profile</h2>
       <p>
-        新規サービスの要件定義から設計・開発・インフラ構築・運用保守までを一貫して担当できるフルスタックエンジニアです。大学でのコンピュータサイエンス専攻を土台に、複数言語・クラウド・AI APIを活用し、効率的かつスケーラブルな開発環境の構築に取り組んできました。
+        業務要件が固まりきっていない段階から入り、現場ヒアリング、業務フロー整理、仕様分解、実装範囲の優先順位付け、設計、実装、テスト、運用改善までをつなぐことを得意としています。
       </p>
       <p>
-        特に生成AI領域では、RAG、OpenAI API、音声データ要約、AIエージェント、SaaS開発を経験。Terraform、Docker、GitHub Actionsを活用したIaC / CI/CDの導入により、PoCからデモ営業まで短期間で立ち上げるスピード感を強みとしています。
+        強みは、単に実装を受けるのではなく、PM・顧客・デザイナー・開発チームの間で認識が割れている論点を整理し、「今作るべき最小単位」「後回しにすべきもの」「デモや検証に必要な最低限の品質ライン」を判断して、実際にコード・インフラ・テスト運用へ落とし込むことです。
       </p>
-      <p>
-        業務ヒアリング、As-Is / To-Be整理、要件定義、設計、フルスタック実装、テスト、品質管理、運用改善まで横断し、曖昧な状況でも「動くもの」を作りながら改善サイクルを回します。
-      </p>
+      <div class="kpi">
+        <div><strong>80%</strong><span class="muted">RAG一次回答率<br>社内計測</span></div>
+        <div><strong>80%</strong><span class="muted">商談議事録作成時間削減<br>PoC内計測</span></div>
+        <div><strong>60名</strong><span class="muted">大規模AIプロダクト<br>品質・テスト管理</span></div>
+        <div><strong>40名</strong><span class="muted">大手通信領域<br>AI活用基盤開発</span></div>
+      </div>
     </section>
 
     <section class="section">
-      <h2>Key Strengths</h2>
+      <h2>判断・意思決定の特徴</h2>
       <div class="grid-3">
         <div class="mini">
-          <div class="num">01</div>
-          <h3>生成AI実装</h3>
-          <p class="muted">RAG、OpenAI API、FAISS、音声要約、AIエージェントを用いたSaaS / 業務アプリ開発。</p>
+          <strong>曖昧な要件を分解する</strong>
+          <p class="muted">業務要件、画面要件、API要件、データ要件、運用要件を分け、会議で混ざっている論点を実装可能な粒度に落とします。</p>
         </div>
         <div class="mini">
-          <div class="num">02</div>
-          <h3>フルスタック開発</h3>
-          <p class="muted">Vue / React / TypeScript、Python、Go、PHP、AWS / Azureまで横断して担当。</p>
+          <strong>PoCで捨てる範囲を決める</strong>
+          <p class="muted">最初から完成品を狙わず、デモ・検証に必要な機能と後回しにする機能を分け、短期間で検証可能な状態を作ります。</p>
         </div>
         <div class="mini">
-          <div class="num">03</div>
-          <h3>上流・推進</h3>
-          <p class="muted">業務ヒアリング、要件定義、設計、テスト設計、WBS管理、会議体運営補佐まで対応。</p>
+          <strong>実装と推進を接続する</strong>
+          <p class="muted">チケット、WBS、テスト観点、リリース単位を整理し、実装者だけでなくPM・QA・顧客が判断しやすい状態を作ります。</p>
         </div>
       </div>
     </section>
@@ -331,264 +201,229 @@
     <section class="section">
       <h2>Skills</h2>
       <dl class="skills">
+        <dt>Language</dt>
+        <dd>TypeScript / Python / Go / PHP</dd>
+
         <dt>Frontend</dt>
-        <dd>Vue / Vite / TypeScript / React / Nuxt3</dd>
+        <dd>React / Vue / Nuxt3 / Vite / TanStack Router / TanStack Query</dd>
 
         <dt>Backend</dt>
-        <dd>Python（FastAPI / Flask / Selenium）/ Go / PHP（Laravel）</dd>
-
-        <dt>Cloud / Infra</dt>
-        <dd>AWS（EC2 / S3 / Route53 / ELB / RDS / ECS）/ Azure（Cosmos DB / App系サービス / Static Web Apps / Storage / Container系サービス）</dd>
+        <dd>Hono.js / FastAPI / Flask / Laravel / REST API / BFF設計</dd>
 
         <dt>Database</dt>
-        <dd>MySQL / AWS MySQL / NoSQL / Cosmos DB</dd>
+        <dd>MySQL / NoSQL / PostgreSQL（pgvector）</dd>
 
         <dt>AI / Search</dt>
-        <dd>OpenAI API / RAG / FAISS / 音声要約 / プロンプト設計</dd>
+        <dd>OpenAI API / Azure OpenAI / Vertex AI / RAG / FAISS / OpenSearch / Whisper / プロンプト設計 / Langfuse</dd>
 
-        <dt>DevOps</dt>
-        <dd>Docker / Terraform / GitHub Actions / Git / GitHub</dd>
+        <dt>Cloud / Infra</dt>
+        <dd>AWS（ECS / EC2 / RDS / S3 / Route53 / ELB / SQS / CloudWatch）/ Azure（App Service / Static Web Apps / Storage / Cosmos DB）</dd>
 
-        <dt>PM / QA</dt>
-        <dd>WBS管理 / テスト設計 / Zephyr運用設計 / Jira / Confluence / 議事録 / 合意形成支援</dd>
+        <dt>DevOps / Quality</dt>
+        <dd>Docker / Docker Compose / Terraform / GitHub Actions / SST / Biome / Zod / Jira / Zephyr / Confluence</dd>
       </dl>
-      <div class="warn">
-        ⚠ Azureの「App」「app container」は正式サービス名が曖昧なため、公開CVでは「App系サービス / Container系サービス」と表記しています。正式名称は要確認です。
-      </div>
     </section>
 
     <section class="section">
-      <h2>Professional Experience</h2>
+      <h2>Experience</h2>
+      <div class="toc">
+        <a href="#exp1">1. 長期参画 / 複数PJ</a>
+        <a href="#exp2">2. 金融AI QA</a>
+        <a href="#exp3">3. 通信AI基盤</a>
+      </div>
       <div class="timeline">
 
-        <article class="exp-card">
+        <article class="exp-card" id="exp1">
           <div class="exp-head">
             <div>
-              <h3>No.1 大手小売領域｜生産管理システム刷新プロジェクト <span class="mask">顧客名非公開</span></h3>
+              <h3>No.1 AI・業務改善・RPA領域の長期参画 <span class="mask">企業名・顧客名非公開</span></h3>
               <div class="role-row">
-                <span class="pill">業務コンサルタント / PM補佐</span>
-                <span class="pill">要件定義</span>
-                <span class="pill">基本設計</span>
-                <span class="pill">10名規模</span>
-              </div>
-            </div>
-            <div class="period">2023年6月 - 2024年5月</div>
-          </div>
-          <p class="muted">
-            年間売上数千億円規模の大手小売領域における、生産管理システム刷新プロジェクトに参画。店舗現場へのヒアリング・業務観察を通じて、As-Is業務整理、To-Be業務フロー設計、部門間の認識差調整、要件定義資料・基本設計書の作成を担当しました。
-          </p>
-          <ul>
-            <li>現場スタッフへのヒアリング、業務観察、業務フロー整理</li>
-            <li>現場、営業、システム部門間の要件解釈差を調整</li>
-            <li>テーブル設計書・API仕様書を業務観点でレビュー</li>
-          </ul>
-          <div class="tech">使用ツール：PowerPoint / Word / Excel / Postman / Googleスプレッドシート</div>
-          <div class="warn">⚠ 技術詳細要確認：実装担当ではなく上流・業務整理中心。対象システムのアーキテクチャ、DB、API方式、画面・バッチ構成などは非記載。</div>
-        </article>
-
-        <article class="exp-card">
-          <div class="exp-head">
-            <div>
-              <h3>No.2 業務アプリ検証・営業リスト自動作成支援 <span class="mask">顧客名非公開</span></h3>
-              <div class="role-row">
-                <span class="pill">テスト</span>
-                <span class="pill">自動化</span>
-                <span class="pill">スクレイピング</span>
-                <span class="pill">6名規模</span>
-              </div>
-            </div>
-            <div class="period">2023年5月 - 2024年6月</div>
-          </div>
-          <p class="muted">
-            業務アプリの負荷テスト・総合テスト、およびクローリング / スクレイピングによる営業リスト作成を担当。要件すり合わせを含め、6万件規模のリスト作成を短期間で実施しました。
-          </p>
-          <ul>
-            <li>負荷テスト・シナリオテストの実施</li>
-            <li>開発完了項目のブラウザ検証</li>
-            <li>クローリング / スクレイピングによる営業リスト作成</li>
-          </ul>
-          <div class="tech">使用技術：Python / Beautiful Soup / Locust / WebDriver / VSCode / Chrome / PowerPoint</div>
-          <div class="warn">⚠ 技術詳細要確認：元資料の「lucust」は「Locust」として補正。WebDriverの種類、対象サイト、負荷条件、実行環境、データ取得ルールは非記載。</div>
-          <div class="warn">⚠ 期間要確認：職務要約は2023年6月開始だが、本案件は2023年5月開始の記載あり。</div>
-        </article>
-
-        <article class="exp-card">
-          <div class="exp-head">
-            <div>
-              <h3>No.3 生成AIナレッジチャットSaaS開発 <span class="mask">企業名・プロダクト名非公開</span></h3>
-              <div class="role-row">
+                <span class="pill">PMO / PL補佐</span>
                 <span class="pill">フルスタックエンジニア</span>
-                <span class="pill">RAG</span>
-                <span class="pill">SaaS</span>
-                <span class="pill">8名規模</span>
-              </div>
-            </div>
-            <div class="period">2024年6月 - 2024年12月</div>
-          </div>
-          <p class="muted">
-            生成AIを活用したナレッジチャットSaaSの要件定義、設計、開発、インフラ構築、運用保守を一貫して担当。ドキュメントをアップロードし、タグや文脈に応じてRAGで回答する機能、アクセスコントロール、テナント機能などを構築しました。
-          </p>
-          <ul>
-            <li>RAGを用いたドキュメント検索・回答生成機能の実装</li>
-            <li>SaaSの基本機能、アクセス制御、テナント機能を構築</li>
-            <li>社内検証・フィードバック反映によるUI/UX改善、検索機能改善</li>
-            <li>短期間でデモ営業可能な状態まで開発を推進</li>
-          </ul>
-          <div class="tech">使用技術：Vue / Vite / TypeScript / Python（FastAPI）/ PHP（Laravel）/ AWS（EC2 / S3 / Route53 / ELB）/ Docker / GitHub Actions / MySQL / OpenAI API / FAISS / GitHub</div>
-          <div class="warn">⚠ 技術詳細要確認：RAGのチャンク分割方式、Embeddingモデル、検索評価指標、権限設計、マルチテナント方式、非同期処理、監視設計は非記載。</div>
-        </article>
-
-        <article class="exp-card">
-          <div class="exp-head">
-            <div>
-              <h3>No.4 生成AI議事録・音声要約アプリ開発 <span class="mask">顧客名非公開</span></h3>
-              <div class="role-row">
-                <span class="pill">バックエンドリード</span>
-                <span class="pill">音声要約</span>
-                <span class="pill">IaC</span>
-                <span class="pill">4名規模</span>
-              </div>
-            </div>
-            <div class="period">2024年12月 - 2025年4月</div>
-          </div>
-          <p class="muted">
-            音声データを文字起こしし、テンプレートに応じて要約生成する業務アプリのバックエンド・インフラ開発を担当。API / DB設計、実装、プロンプト設計・調整、Terraform導入によるIaC化を推進しました。
-          </p>
-          <ul>
-            <li>GoによるバックエンドAPI開発</li>
-            <li>AWS上でのS3 / RDS / ECS構成を用いたインフラ構築</li>
-            <li>OpenAI APIを用いた要約生成とプロンプト調整</li>
-            <li>Terraform導入による環境構築・管理の効率化</li>
-          </ul>
-          <div class="tech">使用技術：Go / AWS（S3 / RDS / ECS）/ Terraform / Docker / AWS MySQL / OpenAI API / Git</div>
-          <div class="warn">⚠ 技術詳細要確認：文字起こし方式、音声アップロード方式、非同期処理、要約テンプレート構造、認証方式、CI/CD、監視・ログ設計は非記載。</div>
-        </article>
-
-        <article class="exp-card">
-          <div class="exp-head">
-            <div>
-              <h3>No.5 スタートアップ向けAIエージェント開発 <span class="mask">企業名・用途詳細非公開</span></h3>
-              <div class="role-row">
-                <span class="pill">フルスタックエンジニア</span>
-                <span class="pill">AIエージェント</span>
-                <span class="pill">Azure</span>
-                <span class="pill">2名規模</span>
-              </div>
-            </div>
-            <div class="period">2025年1月 - 2025年3月</div>
-          </div>
-          <p class="muted">
-            特定のメインタスクを自動補助するAIエージェントを新規開発。React / TypeScriptによるフロントエンド、Go / Pythonによるバックエンド、Azureを用いたインフラ構築まで幅広く担当しました。
-          </p>
-          <ul>
-            <li>短期間でPoCを開発</li>
-            <li>UI/UX設計、API / DB設計、運用保守を一貫して対応</li>
-            <li>OpenAI APIを用いたAI機能を組み込み</li>
-          </ul>
-          <div class="tech">使用技術：React / TypeScript / Go / Python / Azure Cosmos DB / Azure App系サービス / Azure Static Web Apps / Azure Storage / Docker / OpenAI API / GitHub</div>
-          <div class="warn">⚠ 技術詳細要確認：エージェントのタスク内容、ツール実行方式、メモリ設計、認証、Azureサービス正式名称、DBスキーマ、運用監視は非記載。</div>
-        </article>
-
-        <article class="exp-card">
-          <div class="exp-head">
-            <div>
-              <h3>No.6 業界向け契約書作成業務のRPA自動化 <span class="mask">顧客名・業界詳細非公開</span></h3>
-              <div class="role-row">
+                <span class="pill">テックリード</span>
                 <span class="pill">RPA開発リード</span>
-                <span class="pill">PM補佐</span>
-                <span class="pill">Python</span>
-                <span class="pill">6名規模</span>
+                <span class="pill">3〜20名 / 複数PJ</span>
               </div>
             </div>
-            <div class="period">2025年4月 - 2025年10月</div>
+            <div class="period">2023年6月 - 2025年10月</div>
           </div>
+
           <p class="muted">
-            契約書作成業務の自動化RPAシステム開発において、PythonによるRPA自動化プログラムの設計・実装、TypeScript / Nuxt3によるログイン認証機能、既存バックエンドコードのAPI流用実装、技術ドキュメント整備、進捗管理、品質担保を担当しました。
+            AI / DX支援企業に長期参画し、社内SaaS開発、受託PoC、業務アプリ、RPA、自動化、テスト支援を横断。単発の実装担当ではなく、要件が曖昧な段階から入り、実装範囲の整理、技術選定、プロトタイプ、デモ、運用改善まで担当しました。
           </p>
-          <ul>
-            <li>曖昧な要件・体制課題がある中で主担当としてRPA開発を推進</li>
-            <li>インフラ・バックエンド開発の権限移譲を進め、自律開発体制を構築</li>
-            <li>PMの業務設計を補佐し、優先順位付けと技術実装に集中</li>
-          </ul>
-          <div class="tech">使用技術：Python（Selenium）/ TypeScript（Nuxt3）/ AWS（EC2 / S3 / ECS / RDS）</div>
-          <div class="warn">⚠ 技術詳細要確認：元資料では使用技術欄がEC2/S3、詳細欄がEC2/ECS/RDSで差分あり。対象ブラウザ、RPA実行方式、例外処理、認証、ジョブ管理、監視設計は非記載。</div>
+
+          <div class="subproject">
+            <h4>1-A. 大手小売領域｜生産管理システム刷新の要件定義支援</h4>
+            <p class="muted">
+              現場・営業部門・システム部門で業務認識が揃っていない状態から参画。最初に技術仕様へ飛びつくのではなく、店舗現場の作業単位、担当者、入力情報、判断タイミングを観察し、As-Is業務とTo-Be業務を分けて整理しました。
+            </p>
+            <div class="deep-list">
+              <div class="deep-item"><b>判断：</b> 会議上の要望をそのまま仕様化せず、「現場で発生している作業」と「システムに持たせるべき責務」を分離。後続のAPI・テーブル設計が業務からズレないよう、業務観点でレビューしました。</div>
+              <div class="deep-item"><b>具体対応：</b> 現場ヒアリング、業務観察、As-Is / To-Beフロー作成、要件定義資料、基本設計書、テーブル設計書・API仕様書の業務観点レビューを担当。</div>
+              <div class="deep-item"><b>その人がいたからできたこと：</b> エンジニア視点だけでなく現場業務の流れを理解し、業務部門とシステム部門の言葉のズレを翻訳して、実装側が判断できる粒度へ落とし込みました。</div>
+            </div>
+            <div class="tech">使用ツール：PowerPoint / Word / Excel / Postman / Googleスプレッドシート</div>
+            <div class="warn">⚠ 技術詳細要確認：上流支援中心のため、対象システムの実装言語、DB、インフラ、認証、バッチ、外部連携方式は未記載。</div>
+          </div>
+
+          <div class="subproject">
+            <h4>1-B. 業務アプリ検証・負荷テスト・営業データ作成自動化</h4>
+            <p class="muted">
+              業務アプリの総合テストと、営業活動に必要な大規模リスト作成を担当。手作業での収集では納期に間に合わないため、クローリング / スクレイピングで取得・整形する方針を選び、要件すり合わせ込みで短期間に6万件規模のリスト作成を実施しました。
+            </p>
+            <div class="deep-list">
+              <div class="deep-item"><b>判断：</b> 単なる手作業リスト作成ではなく、自動取得・重複整理・項目整形の流れを作ることで、営業利用できるデータに変換する方針を選択。</div>
+              <div class="deep-item"><b>具体対応：</b> Pythonによるクローリング / スクレイピング、ブラウザ検証、シナリオテスト、負荷テスト支援、取得データの項目整理。</div>
+              <div class="deep-item"><b>その人がいたからできたこと：</b> テスターとして見るだけでなく、営業・業務側が使えるアウトプットまで逆算し、検証とデータ作成を同時に進めました。</div>
+            </div>
+            <div class="tech">使用技術：Python / Beautiful Soup / Locust / WebDriver / Chrome / VSCode / PowerPoint</div>
+            <div class="warn">⚠ 技術詳細要確認：WebDriverの種類、負荷条件、テストシナリオ数、対象画面、データクレンジング手順、取得ルールは未記載。</div>
+          </div>
+
+          <div class="subproject">
+            <h4>1-C. 生成AIナレッジチャットSaaSのフルスタック開発</h4>
+            <p class="muted">
+              ドキュメントをアップロードし、タグや文脈に応じて回答するナレッジチャットSaaSを開発。最初から大規模な汎用AI基盤を作るのではなく、「社内検証で価値が見える最小機能」に絞り、ドキュメント管理、タグ付け、検索、回答生成、権限管理、テナント管理を優先しました。
+            </p>
+            <div class="deep-list">
+              <div class="deep-item"><b>判断：</b> デモ営業に必要な価値は「チャットができること」ではなく、「アップロードした文書に基づいて、権限範囲内で回答できること」だと判断し、RAG・タグ・アクセス制御を優先。</div>
+              <div class="deep-item"><b>具体対応：</b> Vue / Vite / TypeScriptによる画面、FastAPIによるAI処理、Laravelによる周辺機能、AWS上の構築、Docker / GitHub Actionsによる開発・デプロイ効率化を担当。</div>
+              <div class="deep-item"><b>実装上の切り分け：</b> ファイル管理、タグ管理、チャットUI、検索処理、回答生成処理、テナント / 権限機能を分け、検証しやすい単位で機能を追加。</div>
+              <div class="deep-item"><b>その人がいたからできたこと：</b> AI機能だけでなくSaaSとして必要な認証・権限・テナント・UI・インフラまで横断し、短期間でデモ営業可能な状態まで持っていきました。</div>
+            </div>
+            <div class="tech">使用技術：Vue / Vite / TypeScript / Python（FastAPI）/ PHP（Laravel）/ AWS（EC2 / S3 / Route53 / ELB）/ Docker / GitHub Actions / MySQL / OpenAI API / FAISS / GitHub</div>
+            <div class="warn">⚠ 技術詳細要確認：Embeddingモデル、チャンク分割、メタデータ設計、検索スコア閾値、再ランキング、マルチテナント方式、監視、非同期処理は未記載。</div>
+          </div>
+
+          <div class="subproject">
+            <h4>1-D. 生成AI議事録・音声要約業務アプリのバックエンド / インフラ開発</h4>
+            <p class="muted">
+              音声データを文字起こしし、テンプレートに応じて要約する業務アプリを担当。フロントよりも先に、音声ファイル、文字起こし結果、要約結果、テンプレート、ユーザー操作の流れをバックエンド側で扱えるデータ構造に整理しました。
+            </p>
+            <div class="deep-list">
+              <div class="deep-item"><b>判断：</b> 要約精度だけを追うのではなく、業務で使える出力にするため、テンプレート単位で要約観点を分ける設計を優先。</div>
+              <div class="deep-item"><b>具体対応：</b> GoによるAPI / DB設計・実装、AWS S3 / RDS / ECS構成、Terraform導入、Docker化、OpenAI API連携、プロンプト調整を担当。</div>
+              <div class="deep-item"><b>推進上の判断：</b> 手作業で環境構築するとPoC後の再現性が落ちるため、Terraformを導入し、環境構築・変更管理をコード化。</div>
+              <div class="deep-item"><b>その人がいたからできたこと：</b> AI出力の調整だけでなく、ファイル管理・DB・API・インフラ・環境構築まで一体で整え、PoCを次フェーズに進められる状態にしました。</div>
+            </div>
+            <div class="tech">使用技術：Go / AWS（S3 / RDS / ECS）/ Terraform / Docker / AWS MySQL / OpenAI API / Git</div>
+            <div class="warn">⚠ 技術詳細要確認：Whisperの利用方式、音声処理の同期 / 非同期、ジョブ管理、認証方式、CI/CD、監視、ログ、リトライ設計は未記載。</div>
+          </div>
+
+          <div class="subproject">
+            <h4>1-E. 既存RAG基盤の横展開・改善</h4>
+            <p class="muted">
+              既存のRAG基盤を別用途に横展開する際、単純なコピーではなく、データの性質、検索対象、回答に必要な文脈、利用者の業務フローを見直し、流用できる部分と作り替える部分を切り分けました。
+            </p>
+            <div class="deep-list">
+              <div class="deep-item"><b>判断：</b> RAGは「同じ実装を横展開すれば動く」ものではないため、ドキュメント構造、検索粒度、タグ / メタデータ、回答形式を用途ごとに確認。</div>
+              <div class="deep-item"><b>具体対応：</b> 既存構成の把握、検索・回答ロジックの調整、UI / APIの変更、検証フィードバックを踏まえた改善。</div>
+              <div class="deep-item"><b>その人がいたからできたこと：</b> 既存資産を活かしながら、用途差分を実装・検証に落とし込み、再利用と作り替えの境界を整理しました。</div>
+            </div>
+            <div class="tech">使用技術：OpenAI API / FAISS / TypeScript / Python / AWS / Docker</div>
+            <div class="warn">⚠ 技術詳細要確認：横展開先の業務、データ形式、評価指標、検索改善手法、回答品質の計測方法は未記載。</div>
+          </div>
+
+          <div class="subproject">
+            <h4>1-F. 契約書作成業務のRPA自動化</h4>
+            <p class="muted">
+              業務設計やスコープが曖昧で炎上リスクがある状況から参画。すべてを一度に整理しようとせず、「自動化しないと価値が出ない中核作業」と「後回しにできる周辺作業」を分け、RPA開発にリソースを集中させました。
+            </p>
+            <div class="deep-list">
+              <div class="deep-item"><b>判断：</b> PM側の業務整理が未確定な中で、仕様を待つのではなく、現時点で確実に自動化できる画面操作・入力・出力処理を切り出して開発を進行。</div>
+              <div class="deep-item"><b>具体対応：</b> Python / SeleniumによるRPA設計・実装、Nuxt3によるログイン認証、既存バックエンドAPI流用、AWSインフラ構築・運用サポート、技術ドキュメント整備。</div>
+              <div class="deep-item"><b>推進上の判断：</b> 属人化していたインフラ・バックエンド作業の権限移譲を進め、現場が自律的に修正・確認できる状態へ移行。</div>
+              <div class="deep-item"><b>その人がいたからできたこと：</b> 曖昧な要件と体制課題を抱えたまま止めずに、実装可能な単位へ分解し、RPAの主担当として開発とプロジェクト推進を同時に支えました。</div>
+            </div>
+            <div class="tech">使用技術：Python（Selenium）/ TypeScript（Nuxt3）/ AWS（EC2 / ECS / RDS / S3）</div>
+            <div class="warn">⚠ 技術詳細要確認：RPA実行方式、対象ブラウザ、例外処理、画面変更時の保守設計、ジョブ実行管理、ログ・監視、認証連携は未記載。</div>
+          </div>
         </article>
 
-        <article class="exp-card">
+        <article class="exp-card" id="exp2">
           <div class="exp-head">
             <div>
-              <h3>No.7 金融領域｜大規模AIプロダクト品質・テスト管理支援 <span class="mask">企業名・取引先名非公開</span></h3>
+              <h3>No.2 金融領域｜大規模AIプロダクトの品質 / テスト設計・管理 <span class="mask">企業名・顧客名非公開</span></h3>
               <div class="role-row">
-                <span class="pill">品質PMO</span>
                 <span class="pill">テスト設計</span>
                 <span class="pill">Zephyr運用設計</span>
+                <span class="pill">品質PMO</span>
                 <span class="pill">60名規模</span>
               </div>
             </div>
-            <div class="period">2025年12月</div>
+            <div class="period">2025年11月 - 2025年12月</div>
           </div>
+
           <p class="muted">
-            金融領域の大規模AIプロダクト開発にテストチームメンバーとして参画。設計が曖昧な状況から、テスト設計、テスト管理プロセス整備、Zephyrを活用したテスト管理運用基盤の構築、WBS管理、会議体運営補佐を担当しました。
+            金融領域の大規模AIプロダクトにおいて、テスト設計・テスト管理・品質PMOを担当。仕様やテストケース作成プロセスが曖昧な状態で、いきなりケースを量産するのではなく、まず「誰が、どの粒度で、何をレビューし、どこで実行管理するか」を整理しました。
           </p>
-          <ul>
-            <li>テストケース作成方針、粒度、レビュー観点を標準化</li>
-            <li>Test Plan / Cycle / Case / Executionの運用構造を整理</li>
-            <li>CSV一括インポート方針、命名規則、フォーマットを策定</li>
-            <li>会議体のアジェンダ作成、論点整理、議事録、合意形成を支援</li>
-          </ul>
+
+          <div class="deep-list">
+            <div class="deep-item"><b>判断：</b> テストケース作成の前に、Test Plan / Test Cycle / Test Case / Executionの関係を整理しないと、進捗・品質・証跡が崩れると判断。Zephyr上の運用構造を先に設計しました。</div>
+            <div class="deep-item"><b>仕様分解：</b> AI機能の仕様をそのままテスト文にせず、入力条件、期待挙動、判定観点、レビュー観点、実行者・確認者の責務に分解。</div>
+            <div class="deep-item"><b>運用設計：</b> CSV一括取込ルール、命名規則、分割ルール、ケース作成フォーマット、レビュー観点を標準化し、属人的なケース作成を抑制。</div>
+            <div class="deep-item"><b>PMO対応：</b> JiraでWBS・進捗を更新し、会議体のアジェンダ、議事録、論点、アクションを整理。会議で流れがちな論点を「決めるべき事項」と「確認待ち事項」に分けました。</div>
+            <div class="deep-item"><b>その人がいたからできたこと：</b> テスト実行者としてだけでなく、品質管理の型、Zephyr運用、会議体、WBS、レビュー観点を接続し、大規模PJで意思決定しやすい状態を作りました。</div>
+          </div>
+
           <div class="tech">使用ツール：PowerPoint / Excel / Confluence / Teams / SharePoint / Slack / Outlook / Jira / Zephyr</div>
-          <div class="warn">⚠ 技術詳細要確認：実装技術ではなくQA / PMO中心。AI機能の内部技術、テスト対象API、検証環境、モデル評価観点、非機能テスト観点は非記載。</div>
+          <div class="warn">⚠ 技術詳細要確認：実装担当ではないため、対象AIプロダクトの内部アーキテクチャ、モデル、API、DB、クラウド構成、非機能テスト条件は未記載。</div>
         </article>
 
-        <article class="exp-card">
+        <article class="exp-card" id="exp3">
           <div class="exp-head">
             <div>
-              <h3>No.8 大手通信領域｜AI活用プラットフォーム開発支援 <span class="mask">企業名・プロダクト名非公開</span></h3>
+              <h3>No.3 大手通信領域｜AI活用プラットフォーム開発支援 <span class="mask">企業名・プロダクト名非公開</span></h3>
               <div class="role-row">
-                <span class="pill">フルスタック開発エンジニア</span>
-                <span class="pill">AI活用プラットフォーム</span>
-                <span class="pill">スプリント開発</span>
-                <span class="pill">約40名規模</span>
+                <span class="pill">フルスタックエンジニア</span>
+                <span class="pill">BFF / Backend</span>
+                <span class="pill">React / TypeScript</span>
+                <span class="pill">検索 / 観測 / 非同期処理</span>
+                <span class="pill">40名規模</span>
               </div>
             </div>
-            <div class="period">2026年1月 - 現在</div>
+            <div class="period">2026年1月 - 2026年6月</div>
           </div>
+
           <p class="muted">
-            大手通信領域のBtoB向けAI活用プラットフォームにおいて、スプリント開発を担当。AI活用を前提としたプロダクト開発サイクル、業務・プロダクト・開発体制のアーキテクチャを理解し、PM、デザイン、開発、企画チームと連携しながら自走しました。
+            大手通信領域のAI活用プラットフォームに参画。約40名規模の体制で、PM・デザイン・開発・企画が分かれる中、まずプロダクト構造、チーム構造、チケット運用、既存アーキテクチャを把握し、スプリント内で実装・改善に入れる状態を作りました。
           </p>
-          <ul>
-            <li>AI活用プラットフォームのスプリント開発に参画</li>
-            <li>旧体制刷新後の新体制において、横断チームと密に連携</li>
-            <li>AI駆動開発プロセスを用いて実装・改善を推進</li>
-          </ul>
-          <div class="tech">使用技術：⚠ 技術詳細要確認（元資料に具体的な言語、FW、DB、クラウド、検索基盤、AI基盤、監視、CI/CDの記載なし）</div>
-          <div class="warn">⚠ 技術詳細要確認：工程、担当機能、使用言語、フロントエンド、バックエンド、DB、クラウド、検索、AIモデル、観測基盤、チケット運用、成果指標が不足。</div>
+
+          <div class="deep-list">
+            <div class="deep-item"><b>判断：</b> 大規模体制では、単にチケットを消化すると周辺仕様と衝突するため、最初にフロント、BFF、検索、DB、AI API、観測、非同期処理の責務境界を把握。</div>
+            <div class="deep-item"><b>フロント実装：</b> TypeScript / React 19 / TanStack Router / TanStack Queryを用い、画面遷移、データ取得、状態管理、API連携の単位を整理しながら機能実装・改善を担当。</div>
+            <div class="deep-item"><b>バックエンド / BFF：</b> Hono.jsを用いたバックエンド実装に関与し、フロントが必要とするデータ形式と、DB・検索・AI処理側の都合をつなぐ役割を担当。</div>
+            <div class="deep-item"><b>検索 / データ：</b> PostgreSQL（pgvector）とOpenSearchが関係する構成を理解し、ベクトル検索・全文検索・メタデータ利用の境界を把握した上で、該当機能の実装・改善に対応。</div>
+            <div class="deep-item"><b>AI / 観測：</b> Azure OpenAI、Vertex AI、Langfuseを含むAI活用機能の周辺実装に関与。AI出力そのものだけでなく、プロンプト、呼び出し、ログ、観測、改善サイクルの流れを理解して実装。</div>
+            <div class="deep-item"><b>インフラ / 運用：</b> AWS（ECS / RDS / S3 / SQS / CloudWatch）やSST、Docker Composeを前提に、ローカル開発・デプロイ・監視・非同期処理の流れを把握しながら開発。</div>
+            <div class="deep-item"><b>その人がいたからできたこと：</b> 新体制移行後の複雑な開発環境で、PM・デザイン・企画の要求を受け身で処理するのではなく、既存アーキテクチャとチケットの意図を読み解き、実装可能な形へ落としてスプリントを前に進めました。</div>
+          </div>
+
+          <div class="tech">使用技術：TypeScript / Hono.js / React 19 / TanStack Router / TanStack Query / PostgreSQL（pgvector）/ OpenSearch / Azure OpenAI / Vertex AI / Langfuse / AWS（ECS / RDS / S3 / SQS / CloudWatch）/ SST / Docker Compose / Biome / Zod</div>
+          <div class="warn">⚠ 技術詳細要確認：具体的な担当機能名、PR単位、画面名、API名、検索改善指標、Langfuseで見ていた評価項目、リリース頻度、障害対応有無は未記載。</div>
         </article>
 
       </div>
     </section>
 
     <section class="section">
-      <h2>Masked Career Summary</h2>
-      <ul>
-        <li>2023年6月〜2024年5月：大手小売領域の生産管理システム刷新支援 / 業務コンサルタント・PM補佐</li>
-        <li>2024年5月〜2024年6月：業務アプリ検証・バックオフィス自動化支援 / テスター・自動化</li>
-        <li>2024年6月〜2024年12月：生成AIナレッジチャットSaaS開発 / SE・PG・PL</li>
-        <li>2024年12月〜2025年4月：生成AI議事録・音声要約アプリ開発 / PG・PL・技術アドバイザー</li>
-        <li>2025年1月〜2025年3月：AIエージェントSaaS開発 / フルスタックエンジニア</li>
-        <li>2025年4月〜2025年10月：契約書作成業務RPA自動化 / RPA開発リード</li>
-        <li>2025年12月：金融領域AIプロダクト品質・テスト管理支援 / QA・PMO</li>
-        <li>2026年1月〜現在：大手通信領域AI活用プラットフォーム開発支援 / フルスタック開発</li>
-      </ul>
-      <div class="danger">
-        顧客情報保護のため、実企業名・実プロダクト名・取引先名・商流情報はこの公開版から削除しています。詳細版はNDA・共有範囲に応じて別途提示してください。
+      <h2>職務要約</h2>
+      <p>
+        2023年6月〜2025年10月までは、AI / DX支援企業にて社内開発・受託PoC・業務改善・RPA・テスト自動化を横断。生成AIナレッジチャットSaaS、議事録AI、既存RAG基盤の横展開、契約書作成RPA、生産管理刷新支援などに従事しました。
+      </p>
+      <p>
+        2025年11月以降は、金融領域の大規模AIプロダクトで品質 / テスト設計・管理を担当し、2026年1月以降は大手通信領域のAI活用プラットフォームでフルスタック開発に参画しています。
+      </p>
+      <div class="warn">
+        ⚠ 本公開版では顧客情報を保護するため、実名企業名・プロダクト名・商流情報は記載していません。
       </div>
     </section>
+
   </main>
 
   <footer>
     <div class="wrap">
-      <p>© Naoya Sakamoto. Public CV. Customer information is masked intentionally.</p>
+      <p>© Naoya Sakamoto. Public CV. Customer and project-specific information is intentionally masked.</p>
     </div>
   </footer>
 </body>
